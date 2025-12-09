@@ -1,54 +1,140 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Save Contact — Ravindra Talekar</title>
-<style>
-  body {font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
-        background:#f6f7fb;margin:0;padding:0;display:flex;align-items:center;
-        justify-content:center;height:100vh;}
-  .card {background:white;border-radius:12px;box-shadow:0 6px 20px rgba(10,20,50,0.08);
-         padding:24px;max-width:420px;width:94%;}
-  h1 {margin:0 0 8px;font-size:22px;}
-  p {margin:0 0 16px;color:#444;}
-  .row {display:flex;gap:12px;align-items:center;}
-  .btn {flex:1;display:inline-block;text-decoration:none;padding:12px 14px;border-radius:10px;
-        text-align:center;font-weight:600;}
-  .btn-download {background:#111;color:#fff;}
-  .btn-open {background:#e9eefb;color:#0a3ee6;}
-  .qr {width:140px;height:140px;border-radius:8px;background:#fff;padding:8px;
-       box-shadow:0 4px 12px rgba(10,20,50,0.06);}
-  .meta {margin-top:12px;font-size:13px;color:#666;}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ravindra Talekar — Save Contact</title>
+  <meta name="description" content="Contact card for Ravindra Talekar — Rydon Innovation. Save contact with one click." />
+  <style>
+    :root{
+      --bg:#071023;
+      --card:#0f2435;
+      --accent:#00d1b2;
+      --muted:rgba(255,255,255,0.72);
+      --glass: rgba(255,255,255,0.04);
+      --radius:18px;
+      --pad:22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:#e6f0f6;background:linear-gradient(180deg,#031026 0%,#071428 100%);-webkit-font-smoothing:antialiased}
+
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:48px}
+    .card{width:100%;max-width:980px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:var(--radius);padding:calc(var(--pad)*1.2);display:grid;grid-template-columns:320px 1fr;gap:26px;box-shadow:0 12px 40px rgba(2,8,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+
+    .left{display:flex;flex-direction:column;align-items:center;gap:16px}
+    .badge{background:linear-gradient(90deg,var(--accent),#66e6c4);padding:6px 12px;border-radius:999px;font-weight:700;color:#032;letter-spacing:0.3px}
+    .avatar{width:148px;height:148px;border-radius:14px;background:linear-gradient(180deg,#e6f7f2, #d0f1ea);display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;color:#022}
+    .qrwrap{background:var(--glass);padding:14px;border-radius:12px}
+
+    .right{padding:6px 2px 2px 0;display:flex;flex-direction:column;gap:12px}
+    h1{margin:2px 0 2px;font-size:28px}
+    .title{color:var(--muted);font-size:14px;margin-top:4px}
+    .info{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+    .pill{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:12px;font-weight:600}
+
+    .actions{display:flex;gap:12px;margin-top:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;border:0;padding:12px 16px;border-radius:12px;font-weight:800;cursor:pointer;text-decoration:none}
+    .btn-download{background:linear-gradient(90deg,var(--accent),#3fe6b8);color:#022}
+    .btn-open{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .meta{margin-top:12px;color:rgba(255,255,255,0.6);font-size:13px}
+
+    .foot{display:flex;align-items:center;justify-content:space-between;margin-top:20px;padding-top:6px;border-top:1px solid rgba(255,255,255,0.02)}
+    .social{display:flex;gap:10px}
+    .smallqr{width:88px;height:88px;border-radius:10px}
+
+    @media(max-width:880px){.card{grid-template-columns:1fr;max-width:720px}.left{flex-direction:row;justify-content:space-between;width:100%}.avatar{width:96px;height:96px;font-size:28px}.smallqr{width:72px;height:72px}}
+  </style>
 </head>
 <body>
+<div class="wrap">
+  <div class="card" role="main">
 
-<div class="card">
-  <h1>Ravindra Talekar</h1>
-  <p>Rydon Innovation — Mumbai, Maharashtra</p>
+    <div class="left">
+      <div style="display:flex;flex-direction:column;align-items:center">
+        <div class="badge">Rydon Innovation</div>
+        <div style="height:12px"></div>
+        <div class="avatar">RT</div>
+      </div>
 
-  <div class="row" style="margin-bottom:14px">
-    <img class="qr" src="Ravindra_Talekar_github_qr.png" alt="QR Code">
-    <div style="flex:1">
-      <!-- Direct Download -->
-      <a class="btn btn-download"
-         href="download.html">
-         Download VCF
-      </a>
-
-      <!-- Raw GitHub link (fallback) -->
-      <a class="btn btn-open" style="margin-top:8px;display:block"
-         href="https://raw.githubusercontent.com/RavindraTalekar/contact-card/main/Ravindra_Talekar.vcf?download=1">
-         Open in Browser
-      </a>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
+        <div class="qrwrap">
+          <img src="Ravindra_Talekar_github_qr.png" alt="QR" class="smallqr">
+        </div>
+        <div style="font-size:13px;color:var(--muted);text-align:center;max-width:200px">Scan to save contact or use the button to download the VCF directly.</div>
+      </div>
     </div>
-  </div>
 
-  <div class="meta">
-    Tip: On iPhone, long-press the Download button → “Download Linked File”.
+    <div class="right">
+      <div>
+        <h1>Ravindra Talekar <span style="font-size:12px;color:#8fdcd0;margin-left:8px">Mr.</span></h1>
+        <div class="title">Head — (Procurement / EV Charging) · Rydon Innovation</div>
+
+        <div class="info">
+          <div class="pill">📍 Mumbai, Maharashtra</div>
+          <div class="pill">📞 +91‑88796‑43803</div>
+          <div class="pill">✉️ rydoninnovation@gmail.com</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-download" id="downloadBtn" href="#" role="button" aria-label="Download vCard">⬇️ Download Contact</a>
+        <a class="btn btn-open" target="_blank" href="https://raw.githubusercontent.com/RavindraTalekar/contact-card/main/Ravindra_Talekar.vcf?download=1">Open Raw</a>
+      </div>
+
+      <div class="meta">Tip: On iPhone, if it opens in the browser, long-press the link and choose &quot;Download Linked File&quot; to save the vCard.</div>
+
+      <div style="flex:1"></div>
+
+      <div class="foot">
+        <div style="color:var(--muted);font-size:13px">Rydon Innovation • © {YEAR}</div>
+        <div class="social">
+          <a href="mailto:rydoninnovation@gmail.com" style="color:var(--muted);text-decoration:none">Email</a>
+          <a href="#" style="color:var(--muted);text-decoration:none">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
+<script>
+// replace {YEAR}
+document.body.innerHTML = document.body.innerHTML.replace('{YEAR}', new Date().getFullYear());
+
+// Download handler: tries multiple methods to force download across devices
+const downloadBtn = document.getElementById('downloadBtn');
+const vcfName = 'Ravindra_Talekar.vcf';
+const relativePath = vcfName; // when deployed with GitHub Pages, this will be at /contact-card/Ravindra_Talekar.vcf
+const githubRaw = 'https://raw.githubusercontent.com/RavindraTalekar/contact-card/main/Ravindra_Talekar.vcf?download=1';
+
+function triggerDownload(url, filename){
+  // create an invisible link and click it
+  const a = document.createElement('a');
+  a.href = url;
+  a.setAttribute('download', filename);
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+
+downloadBtn.addEventListener('click', function(e){
+  e.preventDefault();
+  // Strategy: try relative path (GitHub Pages), then raw link as fallback
+  // 1) Try to fetch HEAD for relative path to check existence
+  fetch(relativePath, {method:'HEAD'}).then(resp=>{
+    if(resp.ok){
+      // use relative path
+      triggerDownload(relativePath, vcfName);
+    } else {
+      // fallback to raw github
+      triggerDownload(githubRaw, vcfName);
+    }
+  }).catch(()=>{
+    // on network errors fallback
+    triggerDownload(githubRaw, vcfName);
+  });
+});
+</script>
 </body>
 </html>
