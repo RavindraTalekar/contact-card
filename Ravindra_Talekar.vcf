@@ -1,10 +1,11 @@
 BEGIN:VCARD
+N:Talekar;Ravindra;
+TEL;TYPE=mobile,VOICE:08879643803
+TEL;TYPE=work,VOICE:18001230267
+EMAIL;TYPE=work,E:ravindra.talekar@magentamobility.com
+ORG:Magenta EV Solutions Private Limited
+TITLE:Supply Chain Head
+ADR;TYPE=WORK,PREF:;;Magenta House, D285, TTC Industrial Area, Navi Mumbai 400705
+URL:https://www.magentamobility.com
 VERSION:3.0
-N:;Ravindra;;;
-FN:Ravindra Talekar
-ORG:Rydon Innovation
-TEL;TYPE=CELL,VOICE:+918879643803
-EMAIL;TYPE=INTERNET:rydoninnovation@gmail.com
-ADR;TYPE=WORK:;;;Mumbai;Maharashtra;;India
-LABEL;TYPE=WORK: Mumbai, Maharashtra, India
 END:VCARD
