@@ -19,12 +19,12 @@
     html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:#e6f0f6;background:linear-gradient(180deg,#031026 0%,#071428 100%);-webkit-font-smoothing:antialiased}
 
     .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:48px}
-    .card{width:100%;max-width:980px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:var(--radius);padding:calc(var(--pad)*1.2);display:grid;grid-template-columns:320px 1fr;gap:26px;box-shadow:0 12px 40px rgba(2,8,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .card{width:100%;max-width:980px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:var(--radius);padding:calc(var(--pad)*1.2);display:grid;grid-template-columns:320px 1fr;gap:26px;box-shadow:0 10px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);border:1px solid #e5e7eb}
 
     .left{display:flex;flex-direction:column;align-items:center;gap:16px}
     .badge{background:linear-gradient(90deg,var(--accent),#66e6c4);padding:6px 12px;border-radius:999px;font-weight:700;color:#032;letter-spacing:0.3px}
     .avatar{width:148px;height:148px;border-radius:14px;background:linear-gradient(180deg,#e6f7f2, #d0f1ea);display:flex;align-items:center;justify-content:center;font-size:44px;font-weight:800;color:#022}
-    .qrwrap{background:var(--glass);padding:14px;border-radius:12px}
+    .qrwrap{background:var(--glass);padding:14px;border-radius:12px;box-shadow:0 4px 12px rgba(10,20,50,0.06)}
 
     .right{padding:6px 2px 2px 0;display:flex;flex-direction:column;gap:12px}
     h1{margin:2px 0 2px;font-size:28px}
@@ -37,11 +37,11 @@
     .btn-download{background:linear-gradient(90deg,var(--accent),#3fe6b8);color:#022}
     .btn-open{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
 
-    .meta{margin-top:12px;color:rgba(255,255,255,0.6);font-size:13px}
+    .meta{margin-top:12px;color:rgba(255,255,255,0.6);font-size:13px}.bio{margin-top:12px;color:rgba(255,255,255,0.9);background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;font-size:15px}
 
     .foot{display:flex;align-items:center;justify-content:space-between;margin-top:20px;padding-top:6px;border-top:1px solid rgba(255,255,255,0.02)}
     .social{display:flex;gap:10px}
-    .smallqr{width:100px;height:100px;border-radius:10px}
+    .smallqr{width:140px;height:140px;border-radius:12px}
 
     @media(max-width:880px){.card{grid-template-columns:1fr;max-width:720px}.left{flex-direction:row;justify-content:space-between;width:100%}.avatar{width:96px;height:96px;font-size:28px}.smallqr{width:72px;height:72px}}
   </style>
@@ -52,7 +52,7 @@
 
     <div class="left">
       <div style="display:flex;flex-direction:column;align-items:center">
-        <div class="badge">Rydon Innovation</div>
+        <img src="company_logo.png" alt="Company Logo" style="width:120px;margin-bottom:10px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.4));">
         <div style="height:12px"></div>
         <div class="avatar">RT</div>
       </div>
@@ -67,8 +67,8 @@
 
     <div class="right">
       <div>
-        <h1><span style="font-size:20px;color:#8fdcd0;margin-left:8px">Mr. </span>Ravindra Talekar</h1>
-        <!--<div class="title">Head — (Procurement / EV Charging) · Rydon Innovation</div> -->
+        <h1><span style="font-size:28px;color:#8fdcd0;margin-right:8px">Mr.</span>Ravindra Talekar</h1>
+        
 
         <div class="info">
           <div class="pill">📍 Mumbai, Maharashtra</div>
@@ -79,7 +79,11 @@
 
       <div class="actions">
         <a class="btn btn-download" id="downloadBtn" href="#" role="button" aria-label="Download vCard">⬇️ Download Contact</a>
-        <!--<a class="btn btn-open" target="_blank" href="https://raw.githubusercontent.com/RavindraTalekar/contact-card/main/Ravindra_Talekar.vcf?download=1">Open Raw</a> -->
+      </div>
+
+      <div class="bio">
+        <h3 style="margin:0 0 6px;font-size:16px">Bio</h3>
+        <p style="margin:0;color:rgba(255,255,255,0.9);font-size:15px">Expertise in Business Operations Digitalization, Global Sourcing and Purchase. Work Train Repeat.</p>
       </div>
 
       <div class="meta">Tip: On iPhone, if it opens in the browser, long-press the link and choose &quot;Download Linked File&quot; to save the vCard.</div>
@@ -90,7 +94,7 @@
         <div style="color:var(--muted);font-size:13px">Rydon Innovation • © {YEAR}</div>
         <div class="social">
           <a href="mailto:rydoninnovation@gmail.com" style="color:var(--muted);text-decoration:none">Email</a>
-          <a href="#" style="color:var(--muted);text-decoration:none">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/ravindratalekar/" style="color:var(--muted);text-decoration:none" target="_blank">LinkedIn</a>
         </div>
       </div>
     </div>
