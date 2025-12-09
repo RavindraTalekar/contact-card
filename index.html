@@ -19,7 +19,7 @@
     html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:#e6f0f6;background:linear-gradient(180deg,#031026 0%,#071428 100%);-webkit-font-smoothing:antialiased}
 
     .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:48px}
-    .card{width:100%;max-width:980px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:var(--radius);padding:calc(var(--pad)*1.2);display:grid;grid-template-columns:320px 1fr;gap:26px;box-shadow:0 10px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);border:1px solid #e5e7eb}
+    .card{width:100%;max-width:980px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:var(--radius);padding:calc(var(--pad)*1.2);display:grid;grid-template-columns:320px 1fr;gap:26px;box-shadow:0 10px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03);border:1px solid #e5e7eb;position:relative;}
 
     .left{display:flex;flex-direction:column;align-items:center;gap:16px}
     .badge{background:linear-gradient(90deg,var(--accent),#66e6c4);padding:6px 12px;border-radius:999px;font-weight:700;color:#032;letter-spacing:0.3px}
@@ -52,20 +52,18 @@
 
     <div class="left">
       <div style="display:flex;flex-direction:column;align-items:center">
-        <img src="company_logo.png" alt="Company Logo" style="width:120px;margin-bottom:10px;filter:drop-shadow(0 2px 4px rgba(0,0,0,0.4));">
+        <div class="logo-circle" style="width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,0.08);margin-bottom:10px;"><img src="company_logo.png" alt="Company Logo" style="width:72px;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.5));border-radius:8px"></div>
         <div style="height:12px"></div>
-        <div class="avatar">RT</div>
+        <div class="avatar"><img src="Ravindra.jpg" alt="Ravindra Talekar Photo" style="width:148px;height:148px;border-radius:50%;object-fit:cover"></div>
       </div>
 
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
-        <div class="qrwrap">
-          <img src="Ravindra_Talekar_github_qr.png" alt="QR" class="smallqr">
-        </div>
-        <div style="font-size:13px;color:var(--muted);text-align:center;max-width:200px">Scan to save contact or use the button to download the VCF directly.</div>
-      </div>
+      
     </div>
 
-    <div class="right">
+    <div class="right"> 
+      <div style="position:absolute;right:36px;top:36px" class="qrwrap"> 
+        <img src="Ravindra_Talekar_github_qr.png" alt="QR Code" class="smallqr"> 
+      </div>
       <div>
         <h1><span style="font-size:28px;color:#8fdcd0;margin-right:8px">Mr.</span>Ravindra Talekar</h1>
         
