@@ -1,9 +1,10 @@
 BEGIN:VCARD
-VERSION:2.1
-N:Talekar;Ravindra;;;
-FN:Ravindra Talekar
-TEL;CELL:+91887964803
-EMAIL;WORK:rydoninnovation@gmail.com
-ADR;HOME:;;Mumbai, Maharashtra, India;;;;
-ORG:Rydon Innovation
+VERSION:3.0
+FN;CHARSET=UTF-8:Ravindra Talekar
+N;CHARSET=UTF-8:Talekar;Ravindra;;Mr.;
+EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:rydoninnovation@gmail.com
+TEL;TYPE=WORK,VOICE:8879643803
+ADR;CHARSET=UTF-8;TYPE=WORK:;;;Mumbai;Maharashtra;;India
+ORG;CHARSET=UTF-8:Rydon Innovation
+REV:2025-12-08T06:27:43.270Z
 END:VCARD
